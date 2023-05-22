@@ -3725,6 +3725,9 @@ var appName = ((_window$document$getE = window.document.getElementsByTagName('ti
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
   color: '#4B5563'
 });
+Echo.channel("messanger").listen('messageSent', function (e) {
+  console.log(e);
+});
 
 /***/ }),
 
@@ -3758,7 +3761,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "LARAVEL_CHATSS",
+  key: "LARAVEL_CHATS",
   cluster: "mt1",
   forceTLS: true
 });

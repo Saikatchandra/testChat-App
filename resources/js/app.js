@@ -16,3 +16,8 @@ createInertiaApp({
 });
 
 InertiaProgress.init({ color: '#4B5563' });
+
+Echo.channel(`messanger`)
+    .listen('messageSent', (e) => {
+        console.log(e);
+    });
